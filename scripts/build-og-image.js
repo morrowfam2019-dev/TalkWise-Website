@@ -26,23 +26,28 @@ async function main() {
           <stop offset="0%" stop-color="#000000" stop-opacity="0"/>
           <stop offset="100%" stop-color="#000000" stop-opacity="0.88"/>
         </linearGradient>
+        <linearGradient id="topFade" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#000000" stop-opacity="0.7"/>
+          <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+        </linearGradient>
       </defs>
-      <rect x="0" y="${H - 300}" width="${W}" height="300" fill="url(#fade)"/>
+      <rect x="0" y="${H - 200}" width="${W}" height="200" fill="url(#fade)"/>
+      <rect x="0" y="0" width="${W}" height="190" fill="url(#topFade)"/>
       <rect x="${HALF - 2}" y="0" width="4" height="${H}" fill="#FCBF11"/>
 
-      <text x="${HALF / 2}" y="${H - 218}" text-anchor="middle" font-family="Arial, sans-serif"
-            font-size="26" font-weight="700" fill="#FFFFFF">Nia</text>
-      <text x="${HALF / 2}" y="${H - 192}" text-anchor="middle" font-family="Arial, sans-serif"
-            font-size="18" letter-spacing="1" fill="#FCBF11">CEO</text>
-      <text x="${HALF / 2}" y="${H - 170}" text-anchor="middle" font-family="Arial, sans-serif"
-            font-size="15" letter-spacing="1" fill="#DDDDDD">SLPA</text>
+      <text x="40" y="56" font-family="Arial, sans-serif"
+            font-size="38" font-weight="800" fill="#FFFFFF">Nia</text>
+      <text x="40" y="90" font-family="Arial, sans-serif"
+            font-size="24" font-weight="700" letter-spacing="1" fill="#FCBF11">CEO</text>
+      <text x="40" y="116" font-family="Arial, sans-serif"
+            font-size="19" font-weight="700" letter-spacing="1" fill="#EEEEEE">SLPA</text>
 
-      <text x="${HALF + HALF / 2}" y="${H - 218}" text-anchor="middle" font-family="Arial, sans-serif"
-            font-size="26" font-weight="700" fill="#FFFFFF">Aaron</text>
-      <text x="${HALF + HALF / 2}" y="${H - 192}" text-anchor="middle" font-family="Arial, sans-serif"
-            font-size="18" letter-spacing="1" fill="#FCBF11">COO</text>
-      <text x="${HALF + HALF / 2}" y="${H - 170}" text-anchor="middle" font-family="Arial, sans-serif"
-            font-size="15" letter-spacing="1" fill="#DDDDDD">CMO</text>
+      <text x="${HALF + 40}" y="56" font-family="Arial, sans-serif"
+            font-size="38" font-weight="800" fill="#FFFFFF">Aaron</text>
+      <text x="${HALF + 40}" y="90" font-family="Arial, sans-serif"
+            font-size="24" font-weight="700" letter-spacing="1" fill="#FCBF11">COO</text>
+      <text x="${HALF + 40}" y="116" font-family="Arial, sans-serif"
+            font-size="19" font-weight="700" letter-spacing="1" fill="#EEEEEE">CMO</text>
 
       <text x="${W / 2}" y="${H - 130}" text-anchor="middle"
             font-family="Georgia, 'Times New Roman', serif" font-size="56" fill="#FFFFFF">
