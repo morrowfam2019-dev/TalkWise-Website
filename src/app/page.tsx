@@ -9,6 +9,7 @@ import { PlatformPreview } from "@/components/home/platform-preview";
 import { Founders } from "@/components/home/founders";
 import { Membership } from "@/components/home/membership";
 import { UpdatesSignup } from "@/components/home/updates-signup";
+import { FollowUs } from "@/components/home/follow-us";
 import { Testimonials } from "@/components/home/testimonials";
 import { FaqPreview } from "@/components/home/faq-preview";
 import { FinalCta } from "@/components/home/final-cta";
@@ -37,6 +38,7 @@ export default function HomePage() {
       <Founders />
       <Membership />
       <UpdatesSignup />
+      <FollowUs />
       <Testimonials />
       <FaqPreview />
       <FinalCta />

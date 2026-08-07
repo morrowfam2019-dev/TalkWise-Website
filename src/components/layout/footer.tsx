@@ -1,5 +1,6 @@
 import Link from "next/link";
 import {
+  FacebookIcon,
   InstagramIcon,
   LinkIcon,
   TiktokIcon,
@@ -10,12 +11,11 @@ import { Container } from "@/components/ui/container";
 import { NewsletterForm } from "@/components/forms/newsletter-form";
 import { DISCLAIMER, footerNav, site } from "@/lib/site";
 
-// No Facebook account exists yet — see the note on `site.social`. Add it back
-// here only once a confirmed handle exists.
 const socials = [
   { label: "TalkWise Academy on Instagram", href: site.social.instagram, Icon: InstagramIcon },
   { label: "TalkWise Academy on TikTok", href: site.social.tiktok, Icon: TiktokIcon },
   { label: "TalkWise Academy on YouTube", href: site.social.youtube, Icon: YoutubeIcon },
+  { label: "TalkWise Academy on Facebook", href: site.social.facebook, Icon: FacebookIcon },
   { label: "All TalkWise links", href: site.social.linktree, Icon: LinkIcon },
 ];
 

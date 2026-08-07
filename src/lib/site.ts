@@ -25,16 +25,16 @@ export const site = {
     communityUrl: "https://whop.com/talkwise-academy",
   },
   /**
-   * Confirmed by the founder 2026-08-05 — see "TalkWise Official Links" doc
-   * in Drive. No Facebook account exists yet; do not add one back without a
-   * confirmed handle. (An earlier placeholder Facebook/Instagram handle was
-   * live on the site and pointed at an unrelated business — verify any new
-   * handle before shipping it.)
+   * Confirmed by the founder — see "TalkWise Official Links" doc in Drive.
+   * (An earlier placeholder Facebook/Instagram handle was live on the site
+   * and pointed at an unrelated business — verify any new handle against
+   * that doc before shipping it.)
    */
   social: {
     instagram: "https://www.instagram.com/talkwiseofficial",
     tiktok: "https://www.tiktok.com/@talkwiseofficial",
-    youtube: "https://youtube.com/@talkwisewithaaron",
+    youtube: "https://www.youtube.com/@TalkWiseWithAaron",
+    facebook: "https://www.facebook.com/profile.php?id=1258951573968533",
     linktree: "https://linktr.ee/talkwise1",
   },
   contactEmail: "hello@talkwiseacademy.com",
