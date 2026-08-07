@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import { PageHero } from "@/components/layout/page-hero";
+import { ComingSoonRibbon } from "@/components/ui/coming-soon-ribbon";
 import { Section, SectionHeading } from "@/components/ui/section";
 import { Stagger, StaggerItem } from "@/components/ui/reveal";
 import { pillars } from "@/lib/content/products";
@@ -62,9 +63,7 @@ export default function GalleryPage() {
                       "radial-gradient(60% 60% at 50% 40%, color-mix(in oklab, var(--color-gold) 24%, transparent) 0%, transparent 70%)",
                   }}
                 />
-                <span className="relative text-2xs uppercase tracking-[0.24em] text-white/35">
-                  Awaiting V2 asset
-                </span>
+                <ComingSoonRibbon />
               </div>
               <figcaption className="p-5">
                 <p className="text-2xs uppercase tracking-[0.2em] text-gold-300">{item.kind}</p>

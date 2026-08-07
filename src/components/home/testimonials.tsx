@@ -1,3 +1,4 @@
+import { ComingSoonRibbon } from "@/components/ui/coming-soon-ribbon";
 import { Section, SectionHeading } from "@/components/ui/section";
 import { Stagger, StaggerItem } from "@/components/ui/reveal";
 
@@ -57,7 +58,8 @@ export function Testimonials() {
             ))
           : pending.map((item, index) => (
               <StaggerItem key={index}>
-                <div className="flex h-full min-h-[16rem] flex-col rounded-panel border border-dashed border-ink/15 p-8">
+                <div className="relative flex h-full min-h-[16rem] flex-col overflow-hidden rounded-panel border border-dashed border-ink/15 p-8">
+                  <ComingSoonRibbon />
                   <div aria-hidden className="flex-1 space-y-3">
                     {[100, 92, 78, 40].map((width, line) => (
                       <div

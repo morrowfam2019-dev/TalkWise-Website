@@ -117,13 +117,13 @@ export function Hero() {
               </div>
             </div>
           ) : (
-            <div className="relative min-h-[24rem] sm:min-h-[27rem]">
+            <div className="relative min-h-[28rem] sm:min-h-[32rem]">
               {/* Beat 1 — the promise. The h1 stays in the DOM for SEO whatever
                   its opacity. Base opacity-100 is fine here: at scroll 0 the
                   motion opacity is already 1, so there is no pre-hydration flash. */}
               <motion.div
                 style={{ opacity: introOpacity, y: introY }}
-                className="absolute inset-x-0 top-0 text-center"
+                className="absolute inset-x-0 top-16 text-center sm:top-20"
               >
                 <p className="flex items-center justify-center gap-3 text-2xs font-medium uppercase tracking-[0.28em] text-gold-300">
                   <span aria-hidden className="h-px w-8 bg-gold/50" />
@@ -146,7 +146,7 @@ export function Hero() {
                   lost once the page is interactive. */}
               <motion.figure
                 style={{ opacity: quoteOpacity, scale: quoteScale }}
-                className="absolute inset-x-0 top-0 m-0 text-center opacity-0"
+                className="absolute inset-x-0 top-16 m-0 text-center opacity-0 sm:top-20"
               >
                 <blockquote className="mx-auto max-w-3xl text-balance-pretty font-display text-display-md leading-[1.06] tracking-[-0.025em]">
                   <span className="text-foil">Building confidence through communication</span>
@@ -159,7 +159,7 @@ export function Hero() {
               {/* Beat 3 — the way in. Same base-state reasoning as beat 2. */}
               <motion.div
                 style={{ opacity: ctaOpacity, y: ctaY }}
-                className="absolute inset-x-0 top-0 text-center opacity-0"
+                className="absolute inset-x-0 top-16 text-center opacity-0 sm:top-20"
               >
                 <p className="mx-auto max-w-xl text-pretty text-lg leading-relaxed text-mist">
                   Practical, visual education for children, families, and adult English
