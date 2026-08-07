@@ -49,14 +49,16 @@ async function main() {
       <text x="${HALF + 40}" y="116" font-family="Arial, sans-serif"
             font-size="19" font-weight="700" letter-spacing="1" fill="#EEEEEE">CMO</text>
 
-      <text x="${W / 2}" y="${H - 130}" text-anchor="middle"
-            font-family="Georgia, 'Times New Roman', serif" font-size="56" fill="#FFFFFF">
-        Confidence Begins With Communication.
+      <text x="${W / 2}" y="${H - 100}" text-anchor="middle"
+            font-family="Georgia, 'Times New Roman', serif" font-size="52" fill="#FFFFFF">
+        Building Confidence through communication
       </text>
-      <text x="${W / 2}" y="${H - 62}" text-anchor="middle" font-family="Arial, sans-serif"
-            font-size="28" font-weight="700" letter-spacing="1">
+
+      <text x="${W / 2}" y="${H - 28}" text-anchor="middle" font-family="Arial, sans-serif"
+            font-size="34" font-weight="700" letter-spacing="1">
         <tspan fill="#FFFFFF">Talk</tspan><tspan fill="#FCBF11">Wise</tspan><tspan fill="#FFFFFF" font-weight="400"> Academy</tspan>
       </text>
+      <rect x="${W / 2 - 178}" y="${H - 16}" width="356" height="3" fill="#FFFFFF"/>
     </svg>
   `);
 
