@@ -132,6 +132,7 @@ export const primaryNav: NavGroup[] = [
     ],
   },
   { label: "Membership", href: "/membership" },
+  { label: "Follow Us", href: "/#follow" },
 ];
 
 export const footerNav: { title: string; links: NavLink[] }[] = [
