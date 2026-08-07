@@ -1,7 +1,7 @@
 export const site = {
   name: "TalkWise Academy",
   shortName: "TalkWise",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://talkwiseacademy.com",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.talkwise.academy",
   tagline: "Confidence Begins With Communication.",
   description:
     "TalkWise helps children, families, and adult English learners build clearer communication and stronger confidence through practical, visual, accessible education.",
