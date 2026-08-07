@@ -1,6 +1,9 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
 
+import { sendTransactionalEmail } from "@/lib/marketing/brevo";
+import { site } from "@/lib/site";
+
 const schema = z.object({
   name: z.string().min(1, "Please tell us your name.").max(120),
   email: z.email("Enter a valid email address."),
@@ -32,9 +35,26 @@ export async function POST(request: Request) {
   }
 
   const { company: _honeypot, ...enquiry } = parsed.data;
-
-  // TODO(phase-8): deliver via Resend and persist to Supabase.
   console.info("[contact]", { ...enquiry, receivedAt: new Date().toISOString() });
+
+  try {
+    await sendTransactionalEmail({
+      to: [{ email: site.contactEmail }],
+      subject: `[TalkWise contact] ${enquiry.topic} — ${enquiry.name}`,
+      textContent:
+        `From: ${enquiry.name} <${enquiry.email}>\n` +
+        (enquiry.organization ? `Organization: ${enquiry.organization}\n` : "") +
+        `Topic: ${enquiry.topic}\n\n${enquiry.message}`,
+      // Lets Aaron just hit reply instead of copying the address out of the body.
+      replyTo: { email: enquiry.email, name: enquiry.name },
+    });
+  } catch (error) {
+    console.error("[contact] email delivery failed — see log above for the message content:", error);
+    return NextResponse.json(
+      { message: "We could not send that right now. Please try again or email us directly." },
+      { status: 500 },
+    );
+  }
 
   return NextResponse.json({ message: "Message received. We usually reply within two business days." });
 }

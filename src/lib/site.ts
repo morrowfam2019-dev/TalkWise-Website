@@ -37,7 +37,7 @@ export const site = {
     facebook: "https://www.facebook.com/profile.php?id=1258951573968533",
     linktree: "https://linktr.ee/talkwise1",
   },
-  contactEmail: "hello@talkwiseacademy.com",
+  contactEmail: "talkwiseaaron@outlook.com",
 } as const;
 
 /**

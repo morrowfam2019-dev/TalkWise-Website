@@ -1,6 +1,6 @@
 import "server-only";
 
-import { isBrevoConfigured, toE164, upsertContact } from "@/lib/marketing/brevo";
+import { isBrevoConfigured, sendTransactionalEmail, toE164, upsertContact } from "@/lib/marketing/brevo";
 
 export type SubscriberInput = {
   email: string;
@@ -59,6 +59,25 @@ export async function addSubscriber(input: SubscriberInput) {
     // than lost. The route turns this into a friendly retry message.
     console.error("[subscriber] RECOVERABLE — Brevo write failed:", record, error);
     throw error;
+  }
+
+  // The contact is already saved at this point, so a confirmation-email
+  // hiccup shouldn't fail the signup itself — just log it for follow-up.
+  if (input.emailConsent) {
+    try {
+      await sendTransactionalEmail({
+        to: [{ email }],
+        subject: "You're on the TalkWise list",
+        textContent:
+          "Thanks for signing up for TalkWise updates.\n\n" +
+          "You'll hear from us with practice ideas, new lesson announcements, and the occasional printable — nothing else.\n\n" +
+          "This isn't a membership and doesn't unlock lessons. If you'd like to join TalkWise, visit https://whop.com/talkwise-academy.\n\n" +
+          "You can unsubscribe any time from the link in any email we send.\n\n" +
+          "— The TalkWise Academy team",
+      });
+    } catch (error) {
+      console.error("[subscriber] confirmation email failed (contact was still saved):", email, error);
+    }
   }
 
   return record;

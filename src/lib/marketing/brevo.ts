@@ -33,6 +33,48 @@ export function isBrevoConfigured() {
   return Boolean(process.env.BREVO_API_KEY && process.env.BREVO_LIST_ID);
 }
 
+export type TransactionalEmail = {
+  to: { email: string; name?: string }[];
+  subject: string;
+  /** Plain text is enough for the confirmation and contact-form emails this sends — no template system needed for two short messages. */
+  textContent: string;
+  replyTo?: { email: string; name?: string };
+};
+
+/**
+ * Brevo's transactional email API (`/smtp/email`) — distinct from the
+ * contacts API above. Used for the signup confirmation and for delivering
+ * contact-form messages, both of which are one-off sends rather than list
+ * management.
+ */
+export async function sendTransactionalEmail(message: TransactionalEmail) {
+  const apiKey = process.env.BREVO_API_KEY;
+  if (!apiKey) throw new Error("Brevo is not configured (BREVO_API_KEY).");
+
+  const response = await fetch(`${API_ROOT}/smtp/email`, {
+    method: "POST",
+    headers: {
+      "api-key": apiKey,
+      "Content-Type": "application/json",
+      Accept: "application/json",
+    },
+    body: JSON.stringify({
+      sender: { name: "TalkWise Academy", email: "morrowfam2019@gmail.com" },
+      to: message.to,
+      subject: message.subject,
+      textContent: message.textContent,
+      ...(message.replyTo ? { replyTo: message.replyTo } : {}),
+    }),
+  });
+
+  if (response.ok) return;
+
+  const body = (await response.json().catch(() => null)) as { message?: string; code?: string } | null;
+  throw new Error(
+    `Brevo email send responded ${response.status}: ${body?.message ?? "unknown error"} (${body?.code ?? "no code"})`,
+  );
+}
+
 /**
  * Normalizes a typed phone number to E.164, which is the only format Brevo
  * accepts for SMS. Assumes US/Canada when no country code is present, since
