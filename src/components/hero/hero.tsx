@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
 
-import { Swarm } from "@/components/hero/swarm";
+import { SonicBloom } from "@/components/hero/sonic-bloom";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { useDeviceTier } from "@/hooks/use-device-tier";
@@ -11,10 +11,10 @@ import { useReducedMotion } from "@/hooks/use-reduced-motion";
 import { site } from "@/lib/site";
 
 /**
- * Opening sequence — "The Swarm".
+ * Opening sequence — "Sonic Bloom".
  *
  * The section is deliberately ~3 screens tall with a sticky inner frame, so the
- * swarm plays out over a MEDIUM scroll drag: long enough that nobody flicks
+ * bloom plays out over a MEDIUM scroll drag: long enough that nobody flicks
  * past Nia's line, short enough that it never feels like the page is stuck.
  * Tune SCROLL_LENGTH to change that pacing; nothing else depends on it.
  *
@@ -85,7 +85,7 @@ export function Hero() {
         />
         <div className="grain-overlay -z-10" />
 
-        {!reduced ? <Swarm progress={progress} tier={tier} activeRef={active} /> : null}
+        {!reduced ? <SonicBloom progress={progress} tier={tier} activeRef={active} /> : null}
 
         <Container size="full" className="relative">
           {reduced ? (
