@@ -27,8 +27,23 @@ async function main() {
           <stop offset="100%" stop-color="#000000" stop-opacity="0.88"/>
         </linearGradient>
       </defs>
-      <rect x="0" y="${H - 240}" width="${W}" height="240" fill="url(#fade)"/>
+      <rect x="0" y="${H - 300}" width="${W}" height="300" fill="url(#fade)"/>
       <rect x="${HALF - 2}" y="0" width="4" height="${H}" fill="#FCBF11"/>
+
+      <text x="${HALF / 2}" y="${H - 218}" text-anchor="middle" font-family="Arial, sans-serif"
+            font-size="26" font-weight="700" fill="#FFFFFF">Nia</text>
+      <text x="${HALF / 2}" y="${H - 192}" text-anchor="middle" font-family="Arial, sans-serif"
+            font-size="18" letter-spacing="1" fill="#FCBF11">CEO</text>
+      <text x="${HALF / 2}" y="${H - 170}" text-anchor="middle" font-family="Arial, sans-serif"
+            font-size="15" letter-spacing="1" fill="#DDDDDD">SLPA</text>
+
+      <text x="${HALF + HALF / 2}" y="${H - 218}" text-anchor="middle" font-family="Arial, sans-serif"
+            font-size="26" font-weight="700" fill="#FFFFFF">Aaron</text>
+      <text x="${HALF + HALF / 2}" y="${H - 192}" text-anchor="middle" font-family="Arial, sans-serif"
+            font-size="18" letter-spacing="1" fill="#FCBF11">COO</text>
+      <text x="${HALF + HALF / 2}" y="${H - 170}" text-anchor="middle" font-family="Arial, sans-serif"
+            font-size="15" letter-spacing="1" fill="#DDDDDD">CMO</text>
+
       <text x="${W / 2}" y="${H - 130}" text-anchor="middle"
             font-family="Georgia, 'Times New Roman', serif" font-size="56" fill="#FFFFFF">
         Confidence Begins With Communication.
