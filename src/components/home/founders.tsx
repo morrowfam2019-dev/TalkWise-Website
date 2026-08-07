@@ -24,17 +24,14 @@ const founders = [
     name: "Aaron",
     role: "Co-Founder, COO & CMO",
     initial: "A",
-    // Awaiting real photography — falls back to the monogram plate below
-    // until a photo lands here, same as Nia did before hers arrived.
-    photo: null,
+    photo: "/founders/aaron.webp",
     bio: "Runs operations and growth, and builds the production system behind every lesson — the curriculum structure, the characters, and the pipeline that keeps a small team shipping like a much larger one.",
   },
 ];
 
 /**
  * Portrait frames fall back to a monogram plate for any founder without a
- * `photo` set — Aaron's, currently. Nia's card was the reference build; once
- * Aaron's photo lands, this component needs no further changes.
+ * `photo` set.
  */
 export function Founders() {
   return (
