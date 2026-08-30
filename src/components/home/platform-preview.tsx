@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { AnimatePresence, motion } from "motion/react";
 
 import { Section, SectionHeading } from "@/components/ui/section";
@@ -131,9 +132,15 @@ function KidsPanel() {
       <div className="mt-7 grid gap-5 lg:grid-cols-5">
         <div className="lg:col-span-3">
           <div className="relative aspect-video overflow-hidden rounded-xl border border-[var(--hairline)] bg-gradient-to-br from-ink-700 to-ink">
-            <div className="absolute inset-0 flex items-center justify-center">
-              <span className="font-display text-[6rem] leading-none text-gold/25">R</span>
-            </div>
+            <Image
+              src="/lessons/r-sound-cover.jpg"
+              alt="Lesson 18 — The R Sound"
+              fill
+              sizes="(min-width: 1024px) 40vw, 90vw"
+              className="object-cover"
+              priority
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-ink/40 via-transparent to-transparent" />
             <button
               type="button"
               aria-label="Play lesson preview"
