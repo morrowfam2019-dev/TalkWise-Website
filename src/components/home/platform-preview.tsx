@@ -133,7 +133,7 @@ function KidsPanel() {
         <div className="lg:col-span-3">
           <div className="relative aspect-video overflow-hidden rounded-xl border border-[var(--hairline)] bg-gradient-to-br from-ink-700 to-ink">
             <Image
-              src="/lessons/r-sound-cover.png"
+              src="/lessons/r-sound-cover.jpg"
               alt="Lesson 18 — The R Sound"
               fill
               sizes="(min-width: 1024px) 40vw, 90vw"
