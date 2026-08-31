@@ -6,6 +6,7 @@ const routes: { path: string; priority: number; changeFrequency: MetadataRoute.S
   { path: "/", priority: 1, changeFrequency: "weekly" },
   { path: "/how-talkwise-helps", priority: 0.9, changeFrequency: "monthly" },
   { path: "/speech-academy", priority: 0.9, changeFrequency: "monthly" },
+  { path: "/talkwise-play", priority: 0.9, changeFrequency: "monthly" },
   { path: "/esl-academy", priority: 0.9, changeFrequency: "monthly" },
   { path: "/parent-training", priority: 0.9, changeFrequency: "monthly" },
   { path: "/interactive-speech-adventures", priority: 0.8, changeFrequency: "monthly" },

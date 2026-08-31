@@ -6,6 +6,7 @@ import { Journey } from "@/components/home/journey";
 import { GlobalEnglish } from "@/components/home/global-english";
 import { HowItHelps } from "@/components/home/how-it-helps";
 import { PlatformPreview } from "@/components/home/platform-preview";
+import { TalkWisePlayTeaser } from "@/components/home/talkwise-play-teaser";
 import { Founders } from "@/components/home/founders";
 import { Membership } from "@/components/home/membership";
 import { UpdatesSignup } from "@/components/home/updates-signup";
@@ -35,6 +36,7 @@ export default function HomePage() {
           site's black, so ESL never reads as an afterthought to the kids' work. */}
       <GlobalEnglish />
       <PlatformPreview />
+      <TalkWisePlayTeaser />
       <Founders />
       <Membership />
       <UpdatesSignup />
