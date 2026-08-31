@@ -59,7 +59,7 @@ export function VideoShowcase({ className }: { className?: string }) {
   return (
     <div
       className={cn(
-        "group relative aspect-video overflow-hidden rounded-panel border border-[var(--hairline)] bg-ink-900 shadow-[0_40px_100px_-30px_rgba(0,0,0,0.65)]",
+        "group relative mx-auto aspect-[9/16] w-full max-w-[380px] overflow-hidden rounded-panel border border-[var(--hairline)] bg-ink-900 shadow-[0_40px_100px_-30px_rgba(0,0,0,0.65)]",
         className,
       )}
     >

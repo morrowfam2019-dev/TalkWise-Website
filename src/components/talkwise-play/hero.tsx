@@ -23,7 +23,7 @@ export function TalkWisePlayHero() {
 
       <Container size="full">
         <div className="grid items-center gap-14 lg:grid-cols-12 lg:gap-12">
-          <div className="lg:col-span-5">
+          <div className="lg:col-span-7">
             <p className="flex items-center gap-3 text-2xs font-medium uppercase tracking-[0.24em] text-gold-300">
               <span aria-hidden className="h-px w-8 bg-gold/50" />
               TalkWise Play
@@ -50,7 +50,7 @@ export function TalkWisePlayHero() {
             </div>
           </div>
 
-          <div className="lg:col-span-7">
+          <div className="lg:col-span-5">
             <Reveal>
               <VideoShowcase />
             </Reveal>
