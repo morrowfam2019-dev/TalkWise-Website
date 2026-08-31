@@ -131,6 +131,7 @@ export const primaryNav: NavGroup[] = [
       { label: "Contact", href: "/contact", description: "Talk to a human" },
     ],
   },
+  { label: "TalkWise Play", href: "/talkwise-play" },
   { label: "Membership", href: "/membership" },
   { label: "Follow Us", href: "/#follow" },
 ];
@@ -140,6 +141,7 @@ export const footerNav: { title: string; links: NavLink[] }[] = [
     title: "Academies",
     links: [
       { label: "Speech Academy", href: "/speech-academy" },
+      { label: "TalkWise Play", href: "/talkwise-play" },
       { label: "ESL Academy", href: "/esl-academy" },
       { label: "Parent Training", href: "/parent-training" },
       { label: "Interactive Speech Adventures", href: "/interactive-speech-adventures" },
